@@ -16,7 +16,7 @@ export default function App() {
 
   const calculate = () => {
     try {
-      setResult(eval(result).toString());
+      setResult((Function("return " + result)()).toString());
     } catch (err) {
       setResult("Error");
     }
